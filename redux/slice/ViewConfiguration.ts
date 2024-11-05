@@ -4,6 +4,9 @@ interface dataType {
   name: string;
   url: string;
   price: string;
+  description: string;
+  stock: number;
+  category: string;
 }
 interface initialType {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any

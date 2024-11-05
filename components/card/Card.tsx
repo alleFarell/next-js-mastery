@@ -10,13 +10,16 @@ interface CardType {
   name: string;
   price: string;
   url: string;
+  description: string;
+  stock: number;
+  category: string;
 }
-const Card = ({ name, price, url }: CardType) => {
+const Card = ({ name, price, url, description, stock, category }: CardType) => {
   const router = useRouter();
   const dispatch = useAppDispatch();
 
   const handleDetail = () => {
-    dispatch(setDetailData({ name, price, url }));
+    dispatch(setDetailData({ name, price, url, description, stock, category }));
     router.push(`/${name}`);
   };
   return (
